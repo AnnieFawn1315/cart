@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="stylesheets/menucopy1.css" /> <!--- Matt's CSS --->
+    <link rel="stylesheet" href="stylesheets/style.css" /> <!--- GLOBAL CSS --->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Varela+Round&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<title>Menu</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+    <div class="pure-menu pure-menu-horizontal center">
+ <ul class="pure-menu-list">
+    <a href="index.html"><img src="Cart-Logo.svg" class="navimg"></a>
+        <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
+        <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a></li>
+        <li class="pure-menu-item"><a href="works.html" class="pure-menu-link">How It Works</a></li>
+		    <li class="pure-menu-item"><a href="menu.html" class="pure-menu-link">Menu</a></li>
+        <li class="pure-menu-item"><a href="calendar.html" class="pure-menu-link">Order</a></li>
+    </ul>
+    <br>
+
+</div>
+
+<h1 style="text-align:center">Menu</h1>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="images/sample/meal1.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="images/sample/meal2.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="images/sample/meal3.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="images/sample/meal4.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="images/sample/meal5.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+    <div class="container">
+    <center>
+      <h2>Features</h2>
+
+        <h3>
+            <span>Mums</span>
+        </h3>
+
+        <p>Sandwiches, hot soups and chilis.  Lunches like you wish your mama made.
+        </p>
+
+        <h3>
+            <span>International</span>
+        </h3>
+
+        <p>Curries, sushi, tacos and a wide range of global meals discovered on our travels.
+        </p>
+        <h3>
+            <span>Healthy</span>
+        </h3>
+        <p>High energy, big on flavour - lots of locally sourced organic veggies.</p>
+
+
+</div>
+
+</center>
+    <div>
+		<div> <img src="images/basics/lunch.png"> </div>
+		<div> <img src="images/healthy/healthy.png"> </div>
+		<div> <img src="images/international/international.png"></div>
+	</div>
+
+<div class="pure-menu pure-menu-horizontal center">
+ <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
+        <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a></li>
+        <li class="pure-menu-item"><a href="works.html" class="pure-menu-link">How It Works</a></li>
+     <li class="pure-menu-item"><a href="menu.html" class="pure-menu-link">Menu</a></li>
+        <li class="pure-menu-item"><a href="calendar.html" class="pure-menu-link">Order</a></li>
+    </ul>
+    <br>
+</div>
+</div>
+
+    </body>
+
+    <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+</html>
